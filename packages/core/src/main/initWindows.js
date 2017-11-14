@@ -13,7 +13,9 @@ const createMainWindow = () => {
       prodURL: `file://${__dirname}/index.html`
     },
     undefined,
-    { icon: resolve(__static, 'icon', 'app.png') }
+    {
+      icon: resolve(__static, 'icon', 'app.png')
+    }
   )
   if (isDev) mainWindow.webContents.openDevTools()
   windowIdKeeper.main = mainWindow.id

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "packages/core"
+		},
+		{
+			"path": "packages/create-window"
+		}
+	]
+}
