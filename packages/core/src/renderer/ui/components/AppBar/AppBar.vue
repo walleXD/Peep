@@ -8,7 +8,6 @@
     v-toolbar-title.white--text Peep
     v-spacer
     v-btn(icon): v-icon search
-
 </template>
 
 <script>

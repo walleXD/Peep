@@ -21,6 +21,19 @@ const createMainWindow = () => {
   windowIdKeeper.main = mainWindow.id
 }
 
+// const createRedditWindow = () => {
+//   const window = createWindow(
+//     { name: 'reddit', hidden: true },
+//     {
+//       devURL: `http://localhost:9080`,
+//       prodURL: `file://${__dirname}/index.html`
+//     }
+//   )
+//   if (isDev) window.webContents.openDevTools()
+//   windowIdKeeper.reddit = window.id
+// }
+
 export default async () => {
+  // createRedditWindow()
   createMainWindow()
 }
