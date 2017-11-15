@@ -25,23 +25,26 @@ export default (
     ? injectReducers(allReducers)
     : combineReducers(allReducers)
 
-  const store = createStore(
-    reducers,
-    preloadedState,
+  const createStoreWithMiddleware =
     composeWithDevTools(
       applyMiddleware(...middlewares)
-    )
+    )(createStore)
+
+  const store = createStoreWithMiddleware(
+    reducers,
+    preloadedState
   )
+  if (module.hot) {
+    module.hot.accept('../reducers', () => {
+      const nextReducer = require('../reducers/index').default
+      store.replaceReducer(nextReducer)
+    })
 
-  module.hot.accept('../reducers', () => {
-    const nextReducer = require('../reducers/index').default
-    store.replaceReducer(nextReducer)
-  })
-
-  module.hot.accept('../epics', () => {
-    const rootEpic = require('../epics/index').default
-    epicMiddleware.replaceEpic(rootEpic)
-  })
+    module.hot.accept('../epics', () => {
+      const rootEpic = require('../epics/index').default
+      epicMiddleware.replaceEpic(rootEpic)
+    })
+  }
 
   return store
 }

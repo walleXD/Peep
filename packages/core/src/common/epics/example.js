@@ -9,7 +9,6 @@ export default [
       .delay(1000)
       .map(action => increment(action.payload))
       .catch(error => {
-        console.log('Theres an error')
         console.error(error.message)
       })
 ]
