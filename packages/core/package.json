@@ -48,7 +48,7 @@
     "vuetify": "^0.17.0"
   },
   "scripts": {
-    "dev": "electron-webpack dev",
+    "start": "electron-webpack dev",
     "compile:dll": "electron-webpack dll",
     "add:pack": "lerna add --scope=@peep/core"
   }

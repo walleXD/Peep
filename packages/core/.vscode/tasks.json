@@ -9,15 +9,8 @@
         "problemMatcher": []
       },
       {
-        "type": "yarn",
-        "script": "dev",
-        "problemMatcher": [
-          "$eslint-compact"
-        ]
-      },
-      {
         "type": "npm",
-        "script": "dev",
+        "script": "start",
         "problemMatcher": [
           "$eslint-compact"
         ]
