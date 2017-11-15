@@ -7,6 +7,7 @@ import { VueRedux } from 'vue2-redux'
 import App from './containers/App.vue'
 import routes from './lib/routes'
 import getStore from './lib/store'
+import 'rxjs'
 
 const store = getStore()
 

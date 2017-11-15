@@ -1,4 +1,5 @@
 export const example = {
-  increment: 'example/increment',
-  decrement: 'example/decrement'
+  increment: 'example/INCREMENT',
+  decrement: 'example/DECREMENT',
+  incrementAsync: 'example/INCREMENT_ASYNC'
 }

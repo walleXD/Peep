@@ -9,3 +9,8 @@ export const decrement = payload => ({
   type: example.decrement,
   payload
 })
+
+export const incrementAsync = payload => ({
+  type: example.incrementAsync,
+  payload
+})
