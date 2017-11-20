@@ -1,11 +1,13 @@
 {
   "title": "Peep",
-  "main": {
-    "extraEntries": []
-  },
+  "main": {},
   "renderer": {
     "dll": [
-      "vue"
+      "vue",
+      "vue-router",
+      "vue2-redux",
+      "vue-meta",
+      "vuetify"
     ]
   }
 }

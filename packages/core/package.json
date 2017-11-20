@@ -48,9 +48,14 @@
     "vue2-redux": "^1.0.1",
     "vuetify": "^0.17.0"
   },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
+  },
   "scripts": {
     "start": "electron-webpack dev",
+    "compile": "electron-webpack",
     "compile:dll": "electron-webpack dll",
-    "add:pack": "lerna add --scope=@peep/core"
+    "add:pack": "lerna add --scope=@peep/core",
+    "dist": "yarn compile && electron-builder"
   }
 }
