@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "main": "dist/index.js",
   "license": "MIT",
+  "peerDependencies": {
+    "electron-is-dev": "^0.3.0",
+    "electron-window": "^0.8.1",
+    "electron-window-state": "^4.1.1"
+  },
   "dependencies": {
     "electron-is-dev": "^0.3.0",
     "electron-window": "^0.8.1",

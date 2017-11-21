@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import isDev from 'electron-is-dev'
 
-import createWindow from '@peep/create-window'
+import createWindow from './createWindow'
 
 const windowIdKeeper = {}
 
@@ -10,15 +10,15 @@ const createMainWindow = () => {
     { name: 'main' },
     {
       devURL: `http://localhost:9080`,
-      prodURL: `file://${__dirname}/index.html`
+      prodURL: `${__dirname}/index.html`
     },
     undefined,
     {
       icon: resolve(__static, 'icon', 'app.png')
     }
   )
-  if (isDev) mainWindow.webContents.openDevTools()
-  windowIdKeeper.main = mainWindow.id
+  mainWindow.webContents.openDevTools()
+  if (isDev) windowIdKeeper.main = mainWindow.id
 }
 
 // const createRedditWindow = () => {

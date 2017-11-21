@@ -1,7 +1,7 @@
 
 import { app } from 'electron'
 import isDev from 'electron-is-dev'
-import { windows } from '@peep/create-window'
+import { windows } from './createWindow'
 import installExtension, { REDUX_DEVTOOLS } from 'electron-devtools-installer'
 
 import initWindows from './initWindows'
