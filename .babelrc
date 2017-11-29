@@ -1,6 +1,8 @@
 {
   "presets": [
     "vue-app",
-    "stage-0"
-  ]
+    "stage-0",
+    "vue"
+  ],
+  "plugins": []
 }
