@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2017"
+    "module": "es2015",
+    "target": "es5",
+    "sourceMap": true
   },
-  "include": ["src/**/*"],
+  "paths": {
+    "common/*": ["./src/common/*"],
+    "@/*": ["./src/renderer/*"]
+  },
+  "include": ["./src/**/*"],
   "exclude": ["node_modules"]
 }

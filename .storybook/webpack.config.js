@@ -9,18 +9,15 @@ module.exports = (baseConfig, env) => {
     loader: 'style-loader!css-loader!stylus-loader'
   })
 
-  const alias = {
+  config.resolve.alias = {
     ...config.resolve.alias,
-    '@': resolve(__dirname, '../', 'src', 'renderer', 'ui')
+    '@': resolve(__dirname, '../', 'src', 'renderer')
   }
 
-  const extensions = [
+  config.resolve.extensions = [
     ...config.resolve.extensions,
     '.styl'
   ]
-
-  config.resolve.alias = alias
-  config.resolve.extensions = extensions
 
   return config
 }

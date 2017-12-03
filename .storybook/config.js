@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import { configure, addDecorator } from '@storybook/vue'
 
-import '@/lib/app.styl'
+import '@/ui/lib/app.styl'
 
 Vue.use(Vuetify)
 
 const req = require.context(
-  '@/components',
+  '@/ui/components',
   true,
   /\__stories__\/.*.js$/
 )

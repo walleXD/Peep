@@ -7,16 +7,18 @@
 </template>
 
 <script>
-  import { increment, decrement, incrementAsync } from 'common/actions/example'
-  import { bindActionCreators } from 'redux'
   import { connect } from 'vue2-redux'
+  import { bindActionCreators } from 'redux'
+  import { increment, decrement, incrementAsync } from 'common/actions'
 
-  const mapStateProps = ({example}) => ({
+  const mapStateProps = ({ example }) => ({
     score: example.score
   })
 
   const mapDispatchProps = dispatch => bindActionCreators({
-    increment, decrement, incrementAsync
+    increment,
+    decrement,
+    incrementAsync
   }, dispatch)
 
   export default connect(

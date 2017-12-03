@@ -1,2 +1,1 @@
-import Test from './test.vue'
-export default Test
+export default from './test.vue'

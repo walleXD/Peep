@@ -13,8 +13,9 @@ const createMainWindow = () => {
       prodURL: resolve(__dirname, 'index.html')
     }
   )
-  mainWindow.webContents.openDevTools()
-  if (isDev) windowIdKeeper.main = mainWindow.id
+
+  windowIdKeeper.main = mainWindow.id
+  if (isDev) mainWindow.webContents.openDevTools()
 }
 
 export default () => {

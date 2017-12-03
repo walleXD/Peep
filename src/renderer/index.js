@@ -12,4 +12,10 @@
 
 // initRenderer(name)
 
+import 'rxjs'
 import './ui'
+
+// import { getPosts$ } from './reddit'
+
+// getPosts$()
+//   .subscribe(data => console.log(data))

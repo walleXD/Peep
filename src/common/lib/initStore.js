@@ -34,6 +34,7 @@ export default (
     reducers,
     preloadedState
   )
+
   if (module.hot) {
     module.hot.accept('../reducers', () => {
       const nextReducer = require('../reducers/index').default

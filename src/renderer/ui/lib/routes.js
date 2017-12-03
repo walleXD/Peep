@@ -4,7 +4,7 @@ export default [
     component: () => import('../layouts/default.vue'),
     children: [
       {
-        path: '*',
+        path: ':sort',
         name: 'HomePage',
         component: () => import('../pages/home.vue')
       }
