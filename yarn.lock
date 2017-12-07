@@ -93,6 +93,12 @@
     react-inspector "^2.2.1"
     uuid "^3.1.0"
 
+"@storybook/addon-centered@^3.2.17":
+  version "3.2.17"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-3.2.17.tgz#d5e7df9c031ef39dc1d9522c0af044bd4afcaba5"
+  dependencies:
+    global "^4.3.2"
+
 "@storybook/addon-links@^3.2.16":
   version "3.2.16"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.2.16.tgz#58b807f7fbcdadb405c6379e69a22c48025c9558"
@@ -7900,9 +7906,9 @@ vue@^2.5.3:
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.6.tgz#73654fefa4b37f25dfc657b8b834b44c90822cd7"
 
-vuetify@^0.17.0:
-  version "0.17.1"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-0.17.1.tgz#9b7f8fe3c541dca9463c9c1d64e1684c0860ac8e"
+vuetify@^1.0.0-alpha.1:
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.0.0-alpha.1.tgz#14d78be8066ba1c82ad5299355a26122b63e5c48"
 
 warning@^3.0.0:
   version "3.0.0"

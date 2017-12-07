@@ -1,4 +1,4 @@
-import { subreddit, posts } from 'common/lib/types'
+import { subreddit, posts, general } from 'common/lib/types'
 
 export const setActive = sub => ({
   type: subreddit.setActive,
@@ -37,5 +37,10 @@ export const clearPosts = () => ({
 
 export const setAnchors = payload => ({
   type: posts.setAnchors,
+  payload
+})
+
+export const setError = payload => ({
+  type: general.setError,
   payload
 })

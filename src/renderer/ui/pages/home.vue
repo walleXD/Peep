@@ -1,16 +1,19 @@
-<template lang="pug">
-  #home-page
-    h1 Home Page
-    example
-    subreddit-loader
-</template>
-
 <script>
   import Example from '../containers/Example.vue'
-  import SubredditLoader from '../containers/SubredditLoader.vue'
+  import { connect } from 'vue2-redux'
+  import { getPosts, setActive } from 'common/actions'
+  import { bindActionCreators } from 'redux'
 
-  export default {
-    components: { Example, SubredditLoader },
-    name: 'HomePage'
-  }
+  const mapDispatchToProps = dispatch => bindActionCreators({
+    setActive, getPosts
+  }, dispatch)
+
+  export default connect(undefined, mapDispatchToProps)({
+    components: { Example },
+    name: 'HomePage',
+    created () {
+      this.setActive('')
+      this.getPosts()
+    }
+  })
 </script>

@@ -8,6 +8,7 @@
     "eslint.autoFixOnSave": true,
     "emmet.triggerExpansionOnTab": true,
     "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-    "vetur.validation.template": true
+		"vetur.validation.template": true,
+		"editor.tabSize": 2
   }
 }

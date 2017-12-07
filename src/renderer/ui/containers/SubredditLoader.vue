@@ -1,7 +1,19 @@
 <template lang="pug">
   .subreddit-loader
     v-btn(@click.native="getMorePosts") Load more
-    li(v-if="posts", v-for="post in posts", :key="post.data.id") {{ post }}
+    post-card(
+      v-if="posts",
+      v-for="post in posts",
+      :key="post.data.id",
+      :id="post.data.id",
+      :title="post.data.title",
+      :domain="post.data.domain",
+      :subreddit="post.data.subreddit",
+      :score="post.data.score",
+      :num_comments="post.data.num_comments"
+      :thumbnail="post.data.thumbnail"
+      :thumbnail_height="post.data.thumbnail_height"
+    )
 </template>
 
 <script>
@@ -13,6 +25,7 @@
     getPosts,
     getMorePosts
   } from '../../../common/actions'
+  import PostCard from '../components/PostCard'
 
   const mapStateToProps = ({ reddit }) => ({
     posts: reddit.posts
@@ -30,9 +43,8 @@
     mapDispatchToProps
   )({
     name: 'SubredditLoader',
-    created () {
-      this.setActive('')
-      this.getPosts()
+    components: {
+      PostCard
     }
   })
 </script>

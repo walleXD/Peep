@@ -12,6 +12,6 @@ export default [
   },
   {
     path: '*',
-    redirect: '/'
+    redirect: '/hot'
   }
 ]

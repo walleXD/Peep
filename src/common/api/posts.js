@@ -1,7 +1,7 @@
 import { apiURL } from './utils'
 import fetch$ from 'observable-fetch'
 
-const token = '1J_QO-Z1_yTurKXcrG9eg8j0Dz8'
+const token = 'Wh6f98selAj-iunTbcd9Ky_6lXA'
 
 export const getPosts$ = (loc = '', params = {}) => {
   const url = apiURL(loc, params)

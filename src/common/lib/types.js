@@ -4,6 +4,10 @@ export const example = {
   incrementAsync: 'example/INCREMENT_ASYNC'
 }
 
+export const general = {
+  setError: 'GENERAL/ERROR'
+}
+
 export const subreddit = {
   setActive: 'POSTS/SET_ACTIVE',
   clearActive: 'POSTS/CLEAR_ACTIVE'
