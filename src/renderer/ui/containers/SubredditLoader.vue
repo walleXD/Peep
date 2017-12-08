@@ -11,8 +11,7 @@
       :subreddit="post.data.subreddit",
       :score="post.data.score",
       :num_comments="post.data.num_comments"
-      :thumbnail="post.data.thumbnail"
-      :thumbnail_height="post.data.thumbnail_height"
+      :preview="post.data.preview"
     )
 </template>
 

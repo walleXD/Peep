@@ -1,0 +1,8 @@
+# MVP - 0.0.1
+✔ Tweak post card structure to one similar to apollo app @started(17-12-07 19:44) @done(17-12-07 21:20) @lasted(1 hour 36 minutes 57 seconds)
+☐ Fix gif handling in post cards
+☐ Add post comment loading
+  ☐ Setup boilerplate to get active post's comments
+  ☐ Draw up single comment component
+  ☐ Setup handling of nested comments
+  ☐ Put together working active post section

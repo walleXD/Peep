@@ -1,6 +1,5 @@
 <template lang="pug">
   v-card.post-card
-    v-card-media(v-if="thumbnail" :src="thumbnail" :height="thumbnail_height")
     v-container.pb-0: v-layout(row, justify-space-between)
       v-flex(xs9, sm10)
         v-card-title.pl-0
@@ -11,7 +10,8 @@
           p.text-xs-right
             v-icon(small).px-1 comment
             span.subheading {{ num_comments }}
-    v-container.pt-0: v-layout(row, justify-space-between, align-center)
+    v-card-media.pt-0(:src="thumbnail" :height="thumbnailHeight")
+    v-container: v-layout(row, justify-space-between, align-center)
       v-flex(xs6): .body-2.ma-0
           span.mr-3 {{ domain }}
           span r/{{ subreddit }}
@@ -30,9 +30,24 @@ export default {
     'title',
     'score',
     'num_comments',
-    'thumbnail',
-    'thumbnail_height'
-  ]
+    'preview'
+  ],
+  computed: {
+    thumbnail: function () {
+      if (!this.preview) return ''
+      const { images } = this.preview
+      if (images.length > 0) {
+        return images[0].source.url
+      }
+    },
+    thumbnailHeight: function () {
+      if (!this.preview) return ''
+      const { images } = this.preview
+      if (images.length > 0) {
+        return images[0].source.height
+      }
+    }
+  }
 }
 </script>
 
