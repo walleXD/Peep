@@ -1,3 +1,5 @@
+<template lang="pug"></template>
+
 <script>
   import Example from '../containers/Example.vue'
   import { connect } from 'vue2-redux'

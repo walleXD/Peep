@@ -5,7 +5,11 @@ export const example = {
 }
 
 export const general = {
-  setError: 'GENERAL/ERROR'
+  setError: 'GENERAL/SET_ERROR',
+  getToken: 'GENERAL/GET_TOKEN',
+  refreshToken: 'GENERAL/REFRESH_TOKEN',
+  setToken: 'GENERAL/SET_TOKEN',
+  setBootingState: 'GENERAL/SET_BOOTING_STATE'
 }
 
 export const subreddit = {

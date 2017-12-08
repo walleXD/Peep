@@ -44,3 +44,18 @@ export const setError = payload => ({
   type: general.setError,
   payload
 })
+
+export const setToken = payload => ({
+  type: general.setToken,
+  payload
+})
+
+export const getToken = () => ({
+  type: general.getToken,
+  payload: ''
+})
+
+export const setBootingState = payload => ({
+  type: general.setBootingState,
+  payload
+})
